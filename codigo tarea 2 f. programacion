@@ -1,0 +1,52 @@
+print("sectores de entrada para estadio el CAMPIN")
+a=15000
+b=13000
+c=10000
+d=11000
+e=20000
+
+print("A-NORTE ALTA")
+print("B-NORTE BAJA")
+print("C-ORIENTAL ALTA")
+print("D-OCCIDENTAL ALTA")
+print("E-EXCLUSIVO")
+
+respuesta1 =input("seleccione el sector: ").lower()
+while respuesta1 not in ("a","b","c","d","e"):
+    respuesta1 = input("digite correctemente la letra del sector: ")
+    
+if respuesta1 =="a":
+    print("el valor de la boleta por unidad es: ",a,"COP.")
+elif respuesta1=="b":
+    print("el valor de la boleta por unidad es: ",b,"COP.")
+elif respuesta1=="c":
+    print("el valor de la boleta por unidad es: ",c,"COP.")
+elif respuesta1=="d":
+    print("el valor de la boleta por unidad es: ",d,"COP.")
+elif respuesta1=="e":
+    print("el valor de la boleta por unidad es: ",e,"COP.")
+    
+#entrada
+num_boletas= str(input("ingrese el numero de boletas que va a comprar: "))
+
+while not num_boletas.isdigit() or int(num_boletas)<=0:
+    num_boletas=input("ingrese el numero de boletas que va a comprar: ")
+    if not num_boletas.isdigit():
+        print("solo se admiten numeros positivos")
+
+#salida
+print("FACTURA")
+
+if respuesta1=="a":
+    precio=a
+elif respuesta1=="b":
+    precio=b
+elif respuesta1=="c":
+    precio=c        
+elif respuesta1=="d":
+    precio=d
+elif respuesta1=="e":
+    precio=e
+print("cantidad de  boletas:",num_boletas)
+print("precio de la boleta por unidad:",precio)
+print("total a pagar: ",int(num_boletas)*precio)
